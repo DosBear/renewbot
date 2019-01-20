@@ -12,8 +12,8 @@ bot = telebot.TeleBot(SECRETS['telegram']['token'], threaded=True)
 
 if SECRETS['telegram']['proxy_ip'] != "":
     apihelper.proxy = {
-        'http': "http://{0}:{1}".format(SECRETS['telegram']['proxy_ip'], SECRETS['telegram']['proxy_port']), 
-        'https': "https://{0}:{1}".format(SECRETS['telegram']['proxy_ip'], SECRETS['telegram']['proxy_port'])}
+        'http': "http://{0}:{1}".format(SECRETS['telegram']['proxy_port'], SECRETS['telegram']['proxy_ip']), 
+        'https': "https://{0}:{1}".format(SECRETS['telegram']['proxy_port'], SECRETS['telegram']['proxy_ip'])}
 
 #@timeout(15)
 def send_all(text):

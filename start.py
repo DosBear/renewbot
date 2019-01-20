@@ -56,7 +56,7 @@ def getCTMServerResult():
 
 
 def GetProgInfo():
-    data = getCTMServerResult()
+    data = getCTMServerResult().decode("utf-8")
     with open(config.VERSION_PATH, "w") as text_file:
         text_file.write(data)
     for prVer in config.SOFT_LIST:
